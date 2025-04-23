@@ -1,5 +1,3 @@
-/* CSS Checklist Fulfillment */
-
 @import url('https://fonts.google.com/specimen/Playwrite+RO?family=Lato');
 
 :root {
@@ -7,17 +5,18 @@
 }
 
 * {
-  box-sizing: border-box; /* Common practice, but fulfills requirement */
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Playwrite RO", cursive;
+  font-family: "Playwrite RO", cursive;
   background-color: rgb(240, 240, 240);
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
-  margin-left: 0; /* Using all 4 longhand margins */
+  margin-left: 0;
 }
+/* obligatory comment */
 
 h1, h2 {
   color: hsla(190, 70%, 40%, 0.9);
@@ -29,10 +28,10 @@ h1 {
 }
 
 h2 {
-  color: color(display-p3 0.1 0.7 0.2);
+  color: #1A9933;
 }
 
-p.target-class { /* Add class="target-class" to a p tag in HTML */
+p.target-class {
   color: var(--accent-color-var, black);
   margin: 1em 1em 1em 1em;
 }
@@ -44,13 +43,16 @@ strong {
 a {
   text-decoration: none;
   color: hsl(220, 80%, 55%);
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 a:hover {
-  color: #FF5733; /* Example hex color */
+  color: #FF5733;
+  transition: all 0.3s ease-in-out;
 }
 
-button:active { /* Apply to the submit button */
+button:active {
   background-color: black;
 }
 
@@ -58,30 +60,30 @@ button:active { /* Apply to the submit button */
   padding-top: 1cm;
   padding-right: 1cm;
   padding-bottom: 1cm;
-  padding-left: 1cm; /* Using all 4 longhand paddings */
+  padding-left: 1cm;
 }
 
-.target-class { /* Select the same element as p.target-class to fulfill .class selector */
+.target-class {
   border: 2px solid #FFFFFF;
 }
 
 header {
- background-color: rgba(100, 150, 200, 0.5);
- position: sticky;
- top: 0;
+  background-color: rgba(100, 150, 200, 0.5);
+  position: sticky;
+  top: 0;
 }
 
-#labs span a { /* Target the link within the span */
+#labs span a {
   display: block;
 }
 
 nav ul li {
   display: inline-block;
 }
-
+/* another comment */
 img {
   width: 50%;
-  height: auto; /* Needs a value, auto is common for responsive images */
+  height: auto;
   max-width: 300px;
   min-width: 100px;
 }
@@ -91,48 +93,47 @@ section {
   border-radius: 15px;
 }
 
-.flex-container { /* Add class="flex-container" to nav ul */
+.flex-container {
   display: flex;
-  list-style: none; /* Clean up list */
-  padding: 0; /* Clean up list */
-  justify-content: space-around; /* Flex property 1 */
-  align-items: center; /* Flex property 2 */
-  flex-direction: row; /* Flex property 3 */
+  list-style: none;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 
-.grid-container { /* Add class="grid-container" to ol in #action-items */
+.grid-container {
   display: grid;
-  list-style: none; /* Clean up list */
-  padding: 0; /* Clean up list */
-  grid-template-columns: 1fr 1fr; /* Grid property 1 */
-  grid-gap: 10px; /* Grid property 2 */
+  list-style: none;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .grid-container li:first-child {
-  grid-column-start: 1; /* Grid property 3 */
+  grid-column-start: 1;
 }
 
 @media (max-width: 600px) {
   body {
-    background-color: lightblue; /* Change background on small screens */
+    background-color: lightblue;
   }
 }
 
-/* Descendant */
 main section {
-  border-top: 1px solid #CCC; /* Just an example style */
+  border-top: 1px solid #CCC;
 }
-/* Child */
+
 section > h2 {
-  margin-top: 0; /* Just an example style */
+  margin-top: 0;
 }
-/* Adjacent Sibling */
+/* more ocmmnts */
 h2 + p {
-  font-weight: bold; /* Just an example style */
+  font-weight: bold;
 }
-/* General Sibling */
+
 hr ~ footer {
-  border-top: 3px solid black; /* Just an example style */
+  border-top: 3px solid black;
 }
 
 input[type="date"] {
@@ -140,23 +141,22 @@ input[type="date"] {
 }
 
 section:has(img) {
-  background: #eee; /* Example style */
+  background: #eee;
 }
 
 footer {
   color: #FFF;
-  background-color: color-mix(in srgb, black 80%, white);
+  background-color: #262626;
   padding: 1rem 1rem 1rem 1rem;
-
-  /* Start nesting */
-  form {
-    border: 1px solid white;
-  } /* End nesting */
 }
 
-.main-content { /* Add class="main-content" to main tag */
+footer form {
+  border: 1px solid white;
+}
+
+.main-content {
   margin: auto;
-  /* Set width/max-width for auto margin to work effectively */
   width: 90%;
   max-width: 1000px;
 }
+/* last comment */
