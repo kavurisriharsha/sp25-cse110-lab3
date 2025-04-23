@@ -1,0 +1,162 @@
+/* CSS Checklist Fulfillment */
+
+@import url('https://fonts.google.com/specimen/Playwrite+RO?family=Lato');
+
+:root {
+  --accent-color-var: orange;
+}
+
+* {
+  box-sizing: border-box; /* Common practice, but fulfills requirement */
+}
+
+body {
+    font-family: "Playwrite RO", cursive;
+  background-color: rgb(240, 240, 240);
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0; /* Using all 4 longhand margins */
+}
+
+h1, h2 {
+  color: hsla(190, 70%, 40%, 0.9);
+}
+
+h1 {
+  text-align: center;
+  font-size: 24pt;
+}
+
+h2 {
+  color: color(display-p3 0.1 0.7 0.2);
+}
+
+p.target-class { /* Add class="target-class" to a p tag in HTML */
+  color: var(--accent-color-var, black);
+  margin: 1em 1em 1em 1em;
+}
+
+strong {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(220, 80%, 55%);
+}
+
+a:hover {
+  color: #FF5733; /* Example hex color */
+}
+
+button:active { /* Apply to the submit button */
+  background-color: black;
+}
+
+#agenda {
+  padding-top: 1cm;
+  padding-right: 1cm;
+  padding-bottom: 1cm;
+  padding-left: 1cm; /* Using all 4 longhand paddings */
+}
+
+.target-class { /* Select the same element as p.target-class to fulfill .class selector */
+  border: 2px solid #FFFFFF;
+}
+
+header {
+ background-color: rgba(100, 150, 200, 0.5);
+ position: sticky;
+ top: 0;
+}
+
+#labs span a { /* Target the link within the span */
+  display: block;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+img {
+  width: 50%;
+  height: auto; /* Needs a value, auto is common for responsive images */
+  max-width: 300px;
+  min-width: 100px;
+}
+
+section {
+  position: relative;
+  border-radius: 15px;
+}
+
+.flex-container { /* Add class="flex-container" to nav ul */
+  display: flex;
+  list-style: none; /* Clean up list */
+  padding: 0; /* Clean up list */
+  justify-content: space-around; /* Flex property 1 */
+  align-items: center; /* Flex property 2 */
+  flex-direction: row; /* Flex property 3 */
+}
+
+.grid-container { /* Add class="grid-container" to ol in #action-items */
+  display: grid;
+  list-style: none; /* Clean up list */
+  padding: 0; /* Clean up list */
+  grid-template-columns: 1fr 1fr; /* Grid property 1 */
+  grid-gap: 10px; /* Grid property 2 */
+}
+
+.grid-container li:first-child {
+  grid-column-start: 1; /* Grid property 3 */
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue; /* Change background on small screens */
+  }
+}
+
+/* Descendant */
+main section {
+  border-top: 1px solid #CCC; /* Just an example style */
+}
+/* Child */
+section > h2 {
+  margin-top: 0; /* Just an example style */
+}
+/* Adjacent Sibling */
+h2 + p {
+  font-weight: bold; /* Just an example style */
+}
+/* General Sibling */
+hr ~ footer {
+  border-top: 3px solid black; /* Just an example style */
+}
+
+input[type="date"] {
+  border: 1px dashed blue;
+}
+
+section:has(img) {
+  background: #eee; /* Example style */
+}
+
+footer {
+  color: #FFF;
+  background-color: color-mix(in srgb, black 80%, white);
+  padding: 1rem 1rem 1rem 1rem;
+
+  /* Start nesting */
+  form {
+    border: 1px solid white;
+  } /* End nesting */
+}
+
+.main-content { /* Add class="main-content" to main tag */
+  margin: auto;
+  /* Set width/max-width for auto margin to work effectively */
+  width: 90%;
+  max-width: 1000px;
+}
